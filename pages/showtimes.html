@@ -1,116 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cinema Reservation System - Showtimes</title>
-    <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="../lib/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+          <text y='0.9em' font-size='90'>🎫</text>
+        </svg>"
+    />
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">CinemaMax</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="showtimes.html">Showtimes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-danger text-white px-3 ms-2" href="signup.html">Sign Up</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">CinemaMax</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="showtimes.html">Showtimes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-danger text-white px-3 ms-2"
+                href="signup.html"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Showtimes -->
     <div class="container my-5">
-        <h2 class="text-center mb-5">Showtimes</h2>
-        
-        <!-- Movie 1 -->
-        <div class="card mb-4 shadow-sm">
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="../imgs/dKL78O9zxczVgjtNcQ9UkbYLzqX.webp" class="img-fluid rounded-start" alt="Movie 1">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <h5 class="card-title">Action Hero</h5>
-                        <p class="card-text">An epic adventure saving the world. Rated PG-13. 2h 15m.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-secondary me-2">Today</span>
-                            <a href="movie.html" class="btn btn-outline-success btn-sm me-2">10:00 AM</a>
-                            <a href="movie.html" class="btn btn-outline-success btn-sm me-2">1:00 PM</a>
-                            <a href="movie.html" class="btn btn-outline-success btn-sm me-2">4:00 PM</a>
-                            <a href="movie.html" class="btn btn-outline-success btn-sm me-2">7:00 PM</a>
-                            <a href="movie.html" class="btn btn-outline-success btn-sm me-2">10:00 PM</a>
-                        </div>
-                        <a href="movie.html" class="btn btn-danger">Book Tickets</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <h2 class="text-center mb-5">Showtimes</h2>
 
-        <!-- Movie 2 -->
-        <div class="card mb-4 shadow-sm">
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="../imgs/oJ7g2CifqpStmoYQyaLQgEU32qO.webp" class="img-fluid rounded-start" alt="Movie 2">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <h5 class="card-title">Comedy Night</h5>
-                        <p class="card-text">Laugh until you cry with this hilarious comedy. Rated R. 1h 45m.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-secondary me-2">Today</span>
-                            <a href="movie.html" class="btn btn-outline-success btn-sm me-2">11:00 AM</a>
-                            <a href="movie.html" class="btn btn-outline-success btn-sm me-2">2:00 PM</a>
-                            <a href="movie.html" class="btn btn-outline-success btn-sm me-2">5:00 PM</a>
-                            <a href="movie.html" class="btn btn-outline-success btn-sm me-2">8:00 PM</a>
-                        </div>
-                        <a href="movie.html" class="btn btn-danger">Book Tickets</a>
-                    </div>
-                </div>
+      <!-- Movie 1 -->
+      <div class="card mb-4 shadow-sm">
+        <div class="row g-0">
+          <div class="col-md-3">
+            <img
+              src="../imgs/dKL78O9zxczVgjtNcQ9UkbYLzqX.webp"
+              class="img-fluid rounded-start"
+              alt="Movie 1"
+            />
+          </div>
+          <div class="col-md-9">
+            <div class="card-body">
+              <h5 class="card-title">Action Hero</h5>
+              <p class="card-text">
+                An epic adventure saving the world. Rated PG-13. 2h 15m.
+              </p>
+              <div class="mb-3">
+                <span class="badge bg-secondary me-2">Today</span>
+                <a href="movie.html" class="btn btn-outline-success btn-sm me-2"
+                  >10:00 AM</a
+                >
+                <a href="movie.html" class="btn btn-outline-success btn-sm me-2"
+                  >1:00 PM</a
+                >
+                <a href="movie.html" class="btn btn-outline-success btn-sm me-2"
+                  >4:00 PM</a
+                >
+                <a href="movie.html" class="btn btn-outline-success btn-sm me-2"
+                  >7:00 PM</a
+                >
+                <a href="movie.html" class="btn btn-outline-success btn-sm me-2"
+                  >10:00 PM</a
+                >
+              </div>
+              <a href="movie.html" class="btn btn-danger">Book Tickets</a>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Movie 3 -->
-        <div class="card mb-4 shadow-sm">
-            <div class="row g-0">
-                <div class="col-md-3">
-                    <img src="../imgs/qCOGGi8JBVEZMc3DVby8rUivyXz.webp" class="img-fluid rounded-start" alt="Movie 3">
-                </div>
-                <div class="col-md-9">
-                    <div class="card-body">
-                        <h5 class="card-title">Space Journey</h5>
-                        <p class="card-text">Explore the unknown depths of the universe. Rated PG. 2h 30m.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-secondary me-2">Today</span>
-                            <a href="movie.html" class="btn btn-outline-success btn-sm me-2">12:00 PM</a>
-                            <a href="movie.html" class="btn btn-outline-success btn-sm me-2">3:30 PM</a>
-                            <a href="movie.html" class="btn btn-outline-success btn-sm me-2">6:30 PM</a>
-                            <a href="movie.html" class="btn btn-outline-success btn-sm me-2">9:30 PM</a>
-                        </div>
-                        <a href="movie.html" class="btn btn-danger">Book Tickets</a>
-                    </div>
-                </div>
+      <!-- Movie 2 -->
+      <div class="card mb-4 shadow-sm">
+        <div class="row g-0">
+          <div class="col-md-3">
+            <img
+              src="../imgs/oJ7g2CifqpStmoYQyaLQgEU32qO.webp"
+              class="img-fluid rounded-start"
+              alt="Movie 2"
+            />
+          </div>
+          <div class="col-md-9">
+            <div class="card-body">
+              <h5 class="card-title">Comedy Night</h5>
+              <p class="card-text">
+                Laugh until you cry with this hilarious comedy. Rated R. 1h 45m.
+              </p>
+              <div class="mb-3">
+                <span class="badge bg-secondary me-2">Today</span>
+                <a href="movie.html" class="btn btn-outline-success btn-sm me-2"
+                  >11:00 AM</a
+                >
+                <a href="movie.html" class="btn btn-outline-success btn-sm me-2"
+                  >2:00 PM</a
+                >
+                <a href="movie.html" class="btn btn-outline-success btn-sm me-2"
+                  >5:00 PM</a
+                >
+                <a href="movie.html" class="btn btn-outline-success btn-sm me-2"
+                  >8:00 PM</a
+                >
+              </div>
+              <a href="movie.html" class="btn btn-danger">Book Tickets</a>
             </div>
+          </div>
         </div>
+      </div>
 
+      <!-- Movie 3 -->
+      <div class="card mb-4 shadow-sm">
+        <div class="row g-0">
+          <div class="col-md-3">
+            <img
+              src="../imgs/qCOGGi8JBVEZMc3DVby8rUivyXz.webp"
+              class="img-fluid rounded-start"
+              alt="Movie 3"
+            />
+          </div>
+          <div class="col-md-9">
+            <div class="card-body">
+              <h5 class="card-title">Space Journey</h5>
+              <p class="card-text">
+                Explore the unknown depths of the universe. Rated PG. 2h 30m.
+              </p>
+              <div class="mb-3">
+                <span class="badge bg-secondary me-2">Today</span>
+                <a href="movie.html" class="btn btn-outline-success btn-sm me-2"
+                  >12:00 PM</a
+                >
+                <a href="movie.html" class="btn btn-outline-success btn-sm me-2"
+                  >3:30 PM</a
+                >
+                <a href="movie.html" class="btn btn-outline-success btn-sm me-2"
+                  >6:30 PM</a
+                >
+                <a href="movie.html" class="btn btn-outline-success btn-sm me-2"
+                  >9:30 PM</a
+                >
+              </div>
+              <a href="movie.html" class="btn btn-danger">Book Tickets</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer text-center">
-        <div class="container">
-            <p class="m-0">&copy; 2025 CinemaMax. All Rights Reserved.</p>
-        </div>
+      <div class="container">
+        <p class="m-0">&copy; 2025 CinemaMax. All Rights Reserved.</p>
+      </div>
     </footer>
 
     <script src="../lib/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
