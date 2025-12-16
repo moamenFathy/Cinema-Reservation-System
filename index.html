@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Reservation System - Home</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CinemaMax</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/showtimes.html">Showtimes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-danger text-white px-3 ms-2" href="pages/signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-4">Experience the Magic of Cinema</h1>
+            <p class="lead">Book your tickets for the latest blockbusters now!</p>
+            <a href="pages/showtimes.html" class="btn btn-danger btn-lg mt-3">Book Now</a>
+        </div>
+    </header>
+
+    <!-- Featured Movies -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Now Showing</h2>
+        <div class="row">
+            <!-- Movie 1 -->
+            <div class="col-md-4">
+                <div class="card movie-card">
+                    <img src="./imgs/dKL78O9zxczVgjtNcQ9UkbYLzqX.webp" class="card-img-top" alt="Movie 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Action Hero</h5>
+                        <p class="card-text">An epic adventure saving the world.</p>
+                        <a href="pages/movie.html" class="btn btn-danger w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Movie 2 -->
+            <div class="col-md-4">
+                <div class="card movie-card">
+                    <img src="./imgs/oJ7g2CifqpStmoYQyaLQgEU32qO.webp" class="card-img-top" alt="Movie 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Comedy Night</h5>
+                        <p class="card-text">Laugh until you cry with this hilarious comedy.</p>
+                        <a href="pages/movie.html" class="btn btn-danger w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Movie 3 -->
+            <div class="col-md-4">
+                <div class="card movie-card">
+                    <img src="./imgs/qCOGGi8JBVEZMc3DVby8rUivyXz.webp" class="card-img-top" alt="Movie 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Space Journey</h5>
+                        <p class="card-text">Explore the unknown depths of the universe.</p>
+                        <a href="pages/movie.html" class="btn btn-danger w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="m-0">&copy; 2025 CinemaMax. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="lib/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

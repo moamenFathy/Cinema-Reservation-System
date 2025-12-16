@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Reservation System - Movie Details</title>
+    <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">CinemaMax</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="showtimes.html">Showtimes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-danger text-white px-3 ms-2" href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Movie Details & Booking -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="../imgs/oJ7g2CifqpStmoYQyaLQgEU32qO.webp" class="img-fluid rounded shadow" alt="Movie Poster">
+            </div>
+            <div class="col-md-8">
+                <h2 class="mb-3">Action Hero</h2>
+                <p class="text-muted">Action, Adventure | 2h 15m | PG-13</p>
+                <p>An epic adventure saving the world. Join our hero as they battle against the forces of evil to save humanity from extinction.</p>
+                
+                <hr>
+
+                <h4 class="mb-3">Select Seats</h4>
+                
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="me-4"><div class="seat d-inline-block align-middle"></div> Available</div>
+                    <div class="me-4"><div class="seat selected d-inline-block align-middle"></div> Selected</div>
+                    <div><div class="seat occupied d-inline-block align-middle"></div> Occupied</div>
+                </div>
+
+                <div class="container-seat d-flex flex-column align-items-center">
+                    <div class="screen text-center fs-1 bg-black text-white">screen</div>
+                    
+                    <div class="row justify-content-center">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat occupied"></div>
+                        <div class="seat occupied"></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                        <div class="seat"></div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <p class="lead">You have selected <span id="count">0</span> seats for a price of $<span id="total">0</span></p>
+                    <a href="payment.html" id="payment" class="btn btn-success btn-lg disabled">Proceed to Payment</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="m-0">&copy; 2025 CinemaMax. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../lib/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const container = document.querySelector('.container-seat');
+        const seats = document.querySelectorAll('.row .seat:not(.occupied)');
+        const count = document.getElementById('count');
+        const total = document.getElementById('total');
+        const ticketPrice = 12;
+        const paymentBtn = document.getElementById('payment');
+
+        function updateSelectedCount() {
+            const selectedSeats = document.querySelectorAll('.container-seat .seat.selected');
+            const selectedSeatsCount = selectedSeats.length;
+            count.innerText = selectedSeatsCount;
+            if (selectedSeats.length <= 0) {
+              paymentBtn.classList.add('disabled');
+            } else {
+              paymentBtn.classList.remove('disabled');
+            }
+            total.innerText = selectedSeatsCount * ticketPrice;
+        }
+
+        container.addEventListener('click', e => {
+            if (e.target.classList.contains('seat') && !e.target.classList.contains('occupied')) {
+                e.target.classList.toggle('selected');
+                updateSelectedCount();
+            }
+        });
+    </script>
+</body>
+</html>
